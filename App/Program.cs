@@ -21,7 +21,7 @@ namespace App
                     thing4bool = random.Next(-1, 1) == 0
                 });
             }
-            var newList = list.InsertionSortBy(x => x.thing2float, true);
+            var newList = list.SelectionSortBy(x => x.thing2float, true);
             OutputTestModel1(list);
             Console.WriteLine("--------");
             OutputTestModel1((List<TestModel1>)newList);
