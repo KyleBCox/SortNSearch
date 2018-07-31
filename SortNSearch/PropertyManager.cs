@@ -41,9 +41,9 @@ namespace SortNSearch
         }
         public static TResult GetMemberValue<TObject, TResult>(TObject obj, string memberName)
         {
-            Type type = obj.GetType();
+            var type = obj.GetType();
 
-            PropertyInfo info = type.GetProperty(memberName);
+            var info = type.GetProperty(memberName);
             if (info == null) { return default(TResult) ; }
 
             return (TResult)info.GetValue(obj, null);

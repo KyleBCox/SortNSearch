@@ -9,19 +9,19 @@ namespace App
     {
         static void Main(string[] args)
         {
-            var random = new Random(1);
+            var random = new Random(2);
             var list = new List<TestModel1>();
             for (var i = 0; i < 20; i++)
             {
                 list.Add(new TestModel1()
                 {
-                    thing1int = random.Next(-1000, 1000),
-                    thing2float = (float)(random.NextDouble() * random.Next(-1000, 1000)),
-                    thing3Double = random.NextDouble() * random.Next(-1000, 1000),
-                    thing4bool = random.Next(-1, 1) == 0
+                    Integer = random.Next(-1000, 1000),
+                    FloatingPoint = (float)(random.NextDouble() * random.Next(-1000, 1000)),
+                    Double = random.NextDouble() * random.Next(-1000, 1000),
+                    Bool = random.Next(-1, 1) == 0
                 });
             }
-            var newList = list.SelectionSortBy(x => x.thing2float, true);
+            var newList = list.SelectionSortBy(x => x.FloatingPoint, true);
             OutputTestModel1(list);
             Console.WriteLine("--------");
             OutputTestModel1((List<TestModel1>)newList);
@@ -32,7 +32,7 @@ namespace App
         {
             foreach (var item in list)
             {
-                Console.WriteLine($"{item.thing1int}, {item.thing2float}, {item.thing3Double}, {item.thing4bool}");
+                Console.WriteLine($"{item.Integer}, {item.FloatingPoint}, {item.Double}, {item.Bool}");
             }
         }
     }

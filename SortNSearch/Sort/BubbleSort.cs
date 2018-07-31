@@ -18,7 +18,7 @@ namespace SortNSearch.Sort
             var itemCount = collection.Count;
 
             var propertyName = PropertyManager.GetMemberName(expression.Body);
-            bool isComplete = false;
+            var isComplete = false;
             while (!isComplete)
             {
                 var swapped = false;

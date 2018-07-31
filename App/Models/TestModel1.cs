@@ -6,9 +6,9 @@ namespace App.Models
 {
     public class TestModel1
     {
-        public int thing1int { get; set; }
-        public float thing2float { get; set; }
-        public double thing3Double { get; set; }
-        public bool thing4bool { get; set; }
+        public int Integer { get; set; }
+        public float FloatingPoint { get; set; }
+        public double Double { get; set; }
+        public bool Bool { get; set; }
     }
 }
